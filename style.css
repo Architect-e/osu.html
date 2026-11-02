@@ -1,0 +1,317 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            user-select: none;
+            background: transparent;
+        }
+
+        body {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .bg {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://i.pinimg.com/originals/ab/a3/18/aba3185047c6785e2dea56bef25fb049.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 30px 50px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-style: italic;
+            color: #ff66aa;
+            text-shadow: 0 0 10px rgba(255, 102, 170, 0.5);
+        }
+
+        .logo span {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 16px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ff66aa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .center-stage {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* MENU CENTRAL */
+
+.menu-bar {
+    position: relative;
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    transition: background 0.4s ease;
+}
+
+/* MENU OUVERT */
+
+.menu-bar.active {
+    background: #292929;
+}
+
+/* LOGO */
+
+#osu-menu-logo {
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+
+    cursor: pointer;
+    z-index: 20;
+    flex-shrink: 0;
+
+    animation: bounce 1s ease-in-out infinite alternate;
+
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+/* LOGO QUAND LE MENU EST OUVERT */
+
+.menu-bar.active #osu-menu-logo {
+    width: 250px;
+    height: 250px;
+}
+
+/* BOUTONS */
+
+.menu-btn {
+    width: 150px;
+    height: 108px;
+
+    border: none;
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.menu-bar.active .menu-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-btn span {
+    font-size: 14px;
+}
+
+/* COULEURS */
+
+.settings {
+    background: #555;
+}
+
+.play {
+    background: #6941c6;
+}
+
+.edit {
+    background: #f0a900;
+}
+
+.browse {
+    background: #9bc900;
+}
+
+.exit {
+    background: #ed2995;
+}
+
+/* HOVER */
+
+.menu-btn:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+/* ANIMATION */
+
+@keyframes bounce {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.05;
+    }
+}
+
+        .menu-btn:hover {
+            filter: brightness(1.2);
+            transform: scale(1.05);
+        }
+
+        .play-button {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff66aa 0%, #cc3377 100%);
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 40px rgba(255, 102, 170, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(255, 102, 170, 0.7);
+        }
+
+        .play-button span {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .bottom-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 12px 28px;
+            border-radius: 12px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: #ff66aa;
+            border-color: #ff66aa;
+        }
+
+        .settings-icon {
+            font-size: 24px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .settings-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        #osu-menu-logo {
+            animation: bounce 1s ease-in-out infinite alternate;
+            transition: filter 0.3s ease;
+            transform-origin: center;
+        }
+
+        @keyframes bounce {
+            from {
+                scale: 1;
+            }
+
+            to {
+                scale: 1.05;
+            }
+        }
+
+        #osu-menu-logo-div:hover {
+            scale: 1.05;
+        }
