@@ -312,6 +312,6 @@
             }
         }
 
-        #osu-menu-logo-div:hover {
-            scale: 1.05;
+        #osu-menu-logo:hover {
+            scale: 1.15;
         }
