@@ -227,17 +227,17 @@
     }
 }
 
-        .menu-btn:hover {
-            filter: brightness(1.2);
-            transform: scale(1.05);
-        }
+.menu-btn:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
 
-        .play-button {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            background: radial-gradient(circle, #ff66aa 0%, #cc3377 100%);
-            border: 8px solid rgba(255, 255, 255, 0.2);
+.play-button {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff66aa 0%, #cc3377 100%);
+    border: 8px solid rgba(255, 255, 255, 0.2);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -325,7 +325,6 @@
                 scale: 1.05;
             }
         }
-
         #osu-menu-logo-div:hover {
             scale: 1.15;
         }
