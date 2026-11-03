@@ -141,8 +141,8 @@
 }
 
 #osu-menu-logo {
-    width: 600px;
-    height: 600px;
+    width: 350px;
+    height: 350px;
     object-fit: contain;
 
     cursor: pointer;
