@@ -93,8 +93,6 @@
     z-index: 10;
 }
 
-/* MENU CENTRAL */
-
 .menu-bar {
     position: relative;
     width: 100%;
@@ -109,13 +107,9 @@
     transition: background 0.4s ease;
 }
 
-/* MENU OUVERT */
-
 .menu-bar.active {
     background: #292929;
 }
-
-/* LOGO */
 
 #osu-menu-logo {
     width: 600px;
@@ -131,14 +125,10 @@
     transition: width 0.4s ease, height 0.4s ease;
 }
 
-/* LOGO QUAND LE MENU EST OUVERT */
-
 .menu-bar.active #osu-menu-logo {
     width: 250px;
     height: 250px;
 }
-
-/* BOUTONS */
 
 .menu-btn {
     width: 150px;
@@ -172,8 +162,6 @@
     font-size: 14px;
 }
 
-/* COULEURS */
-
 .settings {
     background: #555;
 }
@@ -194,14 +182,10 @@
     background: #ed2995;
 }
 
-/* HOVER */
-
 .menu-btn:hover {
     filter: brightness(1.2);
     transform: scale(1.05);
 }
-
-/* ANIMATION */
 
 @keyframes bounce {
     from {
